@@ -1,0 +1,19 @@
+目标：访问天气的webservice服务
+
+1，创建客户端代码
+wsimport -s . http://ws.webxml.com.cn/WebServices/WeatherWS.asmx?wsdl 
+调用失败
+	创建本地wsdl
+	将 <s:element ref="s:schema"/> <s:any/> 修改成 <s:any minOccurs="2" maxOccurs="2" />
+	以绝对路径生成客户端代码
+	wsimport -s . D:\eclipse-workspace\webservice_network_client_4\weather.wsdl
+	
+
+2，查看说明书
+http://ws.webxml.com.cn/WebServices/WeatherWS.asmx?wsdl
+
+3，按照服务说明说编程
+关键节点：
+	<wsdl:service name="WeatherWS"> 			创建WeatherWS对象
+	<wsdl:portType name="WeatherWSSoap">		创建实现类WeatherWSSoap实例对象
+	<wsdl:operation name="getWeather">			调用getWeather方法

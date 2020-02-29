@@ -1,0 +1,6 @@
+目标：通过手工的方式发送满足SOAP协议的数据信息（不用生成客户端代码）
+
+1，观察底层发送的数据格式（xml）
+tcp/ip 监控工具 window->preference->搜tcp/ip monitor
+
+2，组装数据，成为这种数据格式并发送（xml）

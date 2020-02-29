@@ -1,0 +1,12 @@
+
+1，生成客户端代码（在D:\eclipse-workspace\webservice_client_2\src> 生成)
+wsimport -s . http://localhost:8080/weatherService?wsdl
+
+2，查看说明书
+http://localhost:8080/weatherService?wsdl
+
+3，按照服务说明说编程
+关键节点：
+	targetNamespace="http://webservice/" name="WeatherServiceImplService"   获取url，qname创建服务
+	<portType name="WeatherServiceImpl">        获取实现类名称WeatherServiceImpl
+	<portType>标签下的<operation name="query">  获取方法名query

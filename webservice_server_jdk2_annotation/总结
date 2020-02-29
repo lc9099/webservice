@@ -1,0 +1,6 @@
+注解说明
+
+@WebService 说明这是一个webservice的类
+@WebParam	说明参数的一些属性
+@WebResult	说明返回结果的一些属性
+@WebMethod(exclude = true)	说明不发布此方法
